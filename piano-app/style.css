@@ -1,0 +1,70 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #222;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.piano {
+    display: flex;
+    position: relative;
+}
+
+.key {
+    height: 200px;
+    width: 60px;
+    border: 1px solid #000;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.1s ease; 
+}
+
+.white {
+    background: #fff;
+    color: #000;
+}
+
+.white:active {
+    transform: translateY(15px); 
+    background: #f1f1f1;
+}
+
+.black {
+    background: #333;
+    height: 120px;
+    width: 40px;
+    position: absolute;
+    z-index: 1;
+    margin-left: -20px;
+    transition: all 0.1s ease;
+}
+
+.black:active {
+    transform: translateY(15px); 
+    background: #444;
+}
+
+.key.active {
+    background: lightblue;
+}
