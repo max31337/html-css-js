@@ -1,4 +1,3 @@
-
 let recognition; 
 let isListening = false;
 let lastProcessedIndex = 0;
@@ -21,6 +20,12 @@ function startConverting() {
     recognition.start();
     isListening = true;
 
+    const micButtonParent = document.querySelector('.fa-microphone').parentElement;
+    const stopButtonParent = document.querySelector('.fa-stop').parentElement;
+
+    micButtonParent.classList.add('active-mic'); 
+    stopButtonParent.classList.remove('active-stop'); 
+
     recognition.onresult = function (event) {
         let interimTranscript = '';
 
@@ -34,57 +39,49 @@ function startConverting() {
             }
         }
 
-        resultBox.innerText = finalTranscript + formatSentence(interimTranscript);
+        resultBox.innerText = finalTranscript + formatSentence(interimTranscript); 
     };
 
     recognition.onerror = function (event) {
         console.error("Error:", event.error);
-        stopConverting();
+        stopConverting(); 
     };
 
     recognition.onend = function () {
         if (isListening) {
             console.log("Restarting speech recognition...");
-            recognition.start();
+            recognition.start(); 
         }
     };
 }
 
 function stopConverting() {
     if (recognition && isListening) {
-        recognition.stop();
+        recognition.stop(); 
         isListening = false;
+        lastProcessedIndex = 0;
         console.log("Speech recognition stopped.");
+
+        const micButtonParent = document.querySelector('.fa-microphone').parentElement;
+        const stopButtonParent = document.querySelector('.fa-stop').parentElement;
+
+        micButtonParent.classList.remove('active-mic');
+        stopButtonParent.classList.add('active-stop'); 
     }
 }
 
 function formatSentence(text) {
     return text
-        .split(/([.!?]\s    n)/) 
+        .split(/([.!?]\s)/) 
         .map(sentence => {
             let trimmed = sentence.trim();
             if (trimmed) {
                 trimmed = trimmed.charAt(0).toUpperCase() + trimmed.slice(1);
                 if (!/[.!?]$/.test(trimmed)) {
-                    trimmed += '.';
+                    trimmed += '.'; 
                 }
-                trimmed = capitalizeNames(trimmed);
             }
             return trimmed;
         })
         .join(' ');
-}
-
-function capitalizeNames(text) {
-    const names = ["Alice", "Bob", "John", "Mary", "David", "Michael", "Sarah"]; // Add more names here
-    const regex = new RegExp(`\\b(${names.join("|")})\\b`, "gi");
-    return text.replace(regex, (match) => match.charAt(0).toUpperCase() + match.slice(1).toLowerCase());
-}
-
-function stopConverting() {
-    if (recognition && isListening) {
-        recognition.stop();
-        isListening = false;
-        console.log("Speech recognition stopped.");
-    }
 }

@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(197deg, #E0E5EC, #f2f7f2, #80ef80); 
+    color: #333;
+    overflow: hidden;
+}
+
+.container {
+    background: #E0E5EC; 
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 
+        -8px -8px 15px #ffffff, 
+        8px 8px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background: #80ef80;
+    border-radius: 20px;
+    opacity: 0.05; 
+    z-index: -1; 
+}
+
+h2 {
+    font-size: 1.1rem;
+    color: #546c5e;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+#result {
+    background: #E0E5EC;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 
+        inset -4px -4px 10px #ffffff, 
+        inset 4px 4px 10px rgba(0, 0, 0, 0.1);
+    height: 15rem;
+    overflow-y: auto;
+    font-size: 1rem;
+    color: #333;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+button {
+    background: #E0E5EC;
+    border: none;
+    outline: none;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #555;
+    cursor: pointer;
+    box-shadow: 
+        -6px -6px 12px #ffffff, 
+        6px 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    box-shadow: 
+        inset -4px -4px 10px #ffffff, 
+        inset 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover .fa-microphone {
+    color: #80ef80; 
+}
+
+button:hover .fa-stop {
+    color: #e66a76; 
+}
+
+button.active-mic .fa-microphone {
+    color: #80ef80; 
+}
+
+button.active-stop .fa-stop {
+    color: #dc3545; 
+}
+
+button:active {
+    box-shadow: 
+        inset -6px -6px 12px #ffffff, 
+        inset 6px 6px 12px rgba(0, 0, 0, 0.1);
+    transform: scale(0.95);
+}
+
+i {
+    pointer-events: none;
+}
