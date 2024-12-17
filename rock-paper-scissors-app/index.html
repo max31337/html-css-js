@@ -9,20 +9,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    
     <div class="game-container">
+
+        <h1>Rock Paper Scissors</h1>
+
+        <div id="warningModal" class="modal">
+            <div class="modal-content">
+                <i class="icon warning-icon"></i>
+                <span class="close-btn" id="closeWarningModalBtn">&times;</span>
+                <h3>Please select Rock, Paper, or Scissors!</h3>
+            </div>
+        </div>
+
+
         <div class="card-container">
             <div class="card" id="rockCard" data-choice="rock">
                 <img src="https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/svg/270a.svg" alt="Rock">
                 <p>Rock</p>
+                <i class="icon rock-icon"></i>
             </div>
             <div class="card" id="paperCard" data-choice="paper">
                 <img src="https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/svg/270b.svg" alt="Paper">
                 <p>Paper</p>
+                <i class="icon paper-icon"></i>
             </div>
             <div class="card" id="scissorsCard" data-choice="scissors">
-                <img src="https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/svg/2702.svg" alt="Scissors">
+                <img src="https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/svg/270c.svg" alt="Scissors">
                 <p>Scissors</p>
+                <i class="icon scissors-icon"></i>
             </div>
         </div>
 
@@ -38,6 +53,11 @@
         </div>
     </div>
 
+    <div class="score-container">
+        <p>Wins: <span id="winCount">0</span></p>
+        <p>Loses: <span id="loseCount">0</span></p>
+        <button id="resetScores" class="reset-btn">Reset Scores</button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

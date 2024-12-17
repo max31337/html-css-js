@@ -12,6 +12,16 @@ body {
     text-align: center;
 }
 
+#warningModal .modal-content {
+    background-color: #ffcccc;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
 .card-container {
     display: flex;
     justify-content: center;
@@ -49,7 +59,33 @@ body {
     box-shadow: 0 4px 10px rgba(98, 0, 234, 0.5);
 }
 
-/* Button */
+.icon {
+    display: inline-block;
+    width: 30px; 
+    height: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align: middle; 
+}
+
+.rock-icon {
+    background-image: url('https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/svg/1faa8.svg');
+}
+
+.paper-icon {
+    background-image: url('https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/svg/1f4c3.svg');
+}
+
+.scissors-icon {
+    background-image: url('https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/svg/2702.svg');
+}
+
+.warning-icon {
+    background-image: url('https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/svg/26a0.svg');
+}
+
+
+
 .play-btn {
     background-color: #6200ea;
     color: white;
@@ -105,4 +141,38 @@ body {
     margin-top: 10px;
     width: 80px;
     height: 80px;
+}
+
+.score-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.score-container p {
+    margin: 5px 0;
+}
+
+.reset-btn {
+    margin-top: 10px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reset-btn:hover {
+    background-color: #b71c1c;
 }
