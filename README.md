@@ -7,4 +7,4 @@ piano app
 ![text-to-voice-app ](https://github.com/max31337/html-css-js/blob/main/project-images/text-to-voice-app.png?raw=true)
 ![robot-joke-generator-app ](https://github.com/max31337/html-css-js/blob/main/project-images/robot-joke-generator-app.png?raw=true)
 ![robot-joke-generator(dark-mode)-app ](https://github.com/max31337/html-css-js/blob/main/project-images/robot-joke-generator(dark-mode)-app.png?raw=true)
-![hsl-generator-app ](https://github.com/max31337/html-css-js/blob/main/project-images/project-images/hsl-generator-app.png?raw=true)
+![hsl-color-generator-app ](https://github.com/max31337/html-css-js/blob/main/project-images/project-images/hsl-color-generator-app.png?raw=true)
