@@ -6,10 +6,11 @@ function textToAudio() {
         return;
     }
 
+    window.speechSynthesis.cancel();
+
     const speech = new SpeechSynthesisUtterance();
 
     speech.text = text;
-
     speech.rate = 1;
     speech.pitch = 1; 
     speech.volume = 1;
