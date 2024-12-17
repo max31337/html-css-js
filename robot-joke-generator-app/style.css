@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --background-light: #f5f5f5;
+    --background-dark: #1e1e1e;
+    --text-light: #000;
+    --text-dark: #fff;
+    --header-light: #ddd;
+    --header-dark: #333;
+    --button-light: #007bff;
+    --button-dark: #555;
+    --scrollbar-light: #ccc;
+    --scrollbar-dark: #555;
+    --scrollbar-thumb-light: #888;
+    --scrollbar-thumb-dark: #bbb;
+}
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    background-color: var(--background-light);
+    color: var(--text-light);
+}
+
+body.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: inherit;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--header-dark);
+    color: var(--text-dark);
+    transition: background-color 0.3s;
+}
+
+body.light-mode .header {
+    background-color: var(--header-light);
+    color: var(--text-light);
+}
+
+.avatar-container {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.themeToggle {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.chat {
+    height: 67vh;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Scrollbar Styling for Light Mode */
+body.light-mode .chat::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+body.light-mode .chat::-webkit-scrollbar-track {
+    background-color: var(--background-light);
+}
+
+body.light-mode .chat::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-light);
+    border-radius: 4px;
+}
+
+body.light-mode .chat::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-light);
+}
+
+body.dark-mode .chat::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+body.dark-mode .chat::-webkit-scrollbar-track {
+    background-color: var(--background-dark);
+}
+
+body.dark-mode .chat::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-dark);
+    border-radius: 4px;
+}
+
+body.dark-mode .chat::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-dark);
+}
+
+.chat .message {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+.chat .user {
+    align-self: flex-end;
+    background-color: var(--button-light);
+    color: #fff;
+}
+
+.chat .bot {
+    align-self: flex-start;
+    background-color: var(--button-dark);
+    color: #fff;
+}
+
+.jokeBtn {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--button-light);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.jokeBtn:hover {
+    background-color: #0056b3;
+}
