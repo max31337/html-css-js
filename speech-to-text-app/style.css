@@ -102,12 +102,20 @@ button:hover .fa-stop {
     color: #e66a76; 
 }
 
+button:hover .fa-trash {
+    color: #4f7af1; 
+}
+
 button.active-mic .fa-microphone {
     color: #80ef80; 
 }
 
 button.active-stop .fa-stop {
     color: #dc3545; 
+}
+
+button.active-stop .fa-trash {
+    color: #4f7af1; 
 }
 
 button:active {
@@ -119,4 +127,37 @@ button:active {
 
 i {
     pointer-events: none;
+}
+
+
+#result::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+#result::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 20px;
+    box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.3), inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#result::-webkit-scrollbar-thumb:hover {
+    background: #80ef80;
+    box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.3), inset -2px -2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#result::-webkit-scrollbar-track {
+    background: #E0E5EC;
+    border-radius: 20px;
+    box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#result::-webkit-scrollbar-horizontal {
+    height: 8px;
+}
+
+#result::-webkit-scrollbar-thumb:horizontal {
+    background: #ccc;
+    border-radius: 20px;
+    box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.3), inset -2px -2px 4px rgba(0, 0, 0, 0.2);
 }
