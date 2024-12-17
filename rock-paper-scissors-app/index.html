@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Ctext x='0' y='50' font-size='48'%3E✊%3C/text%3E%3C/svg%3E">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <div class="card-container">
+            <div class="card" id="rockCard" data-choice="rock">
+                <img src="https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/svg/270a.svg" alt="Rock">
+                <p>Rock</p>
+            </div>
+            <div class="card" id="paperCard" data-choice="paper">
+                <img src="https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/svg/270b.svg" alt="Paper">
+                <p>Paper</p>
+            </div>
+            <div class="card" id="scissorsCard" data-choice="scissors">
+                <img src="https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/svg/2702.svg" alt="Scissors">
+                <p>Scissors</p>
+            </div>
+        </div>
+
+        <button id="playButton" class="play-btn">Let's Play</button>
+    </div>
+
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModalBtn">&times;</span>
+            <h2 id="resultMessage"></h2>
+            <p id="computerChoice"></p>
+            <img id="computerChoiceIcon" src="" alt="Computer Choice">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
