@@ -1,7 +1,7 @@
 # 📚 A compilation of small projects using html-css-js 
 (what I learned from Udemy courses and from other sources)
 
-Piano app
+Piano app  
 UI inspired by some of the most popular piano apps.
 ![piano-app ](https://github.com/max31337/html-css-js/blob/main/project-images/piano-app.png?raw=true)
 
