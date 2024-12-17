@@ -19,7 +19,8 @@ UI inspired by Discord's design.
 DarkMode
 ![robot-joke-generator(dark-mode)-app ](https://github.com/max31337/html-css-js/blob/main/project-images/robot-joke-generator(dark-mode)-app.png?raw=true)
 
-HSL color generator app
+HSL color generator app  
+UI inspired by ShadCN's UI.
 ![hsl-color-generator-app ](https://github.com/max31337/html-css-js/blob/main/project-images/hsl-color-generator-app.png?raw=true)
 
 Rock, Paper and Scissors App  
