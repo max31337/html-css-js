@@ -27,3 +27,8 @@ Rock, Paper and Scissors App
 I made this to use modals and to practice the use of the `Math.random()` function.  
 UI inspired by Google's Material Design.
 ![rock-paper-scissors-app ](https://github.com/max31337/html-css-js/blob/main/project-images/rock-paper-scissors-app.png?raw=true)
+
+
+Digital Clock App  
+UI inspired by Google's Material Design and a bit of Pines UI for toggles.
+![digital-clock-app ](https://github.com/max31337/html-css-js/blob/main/project-images/digital-clock-app.png?raw=true)

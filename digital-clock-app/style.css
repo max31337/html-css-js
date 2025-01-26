@@ -1,0 +1,83 @@
+/* General Styling */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #282c34;
+    font-family: 'Arial', sans-serif;
+    color: #61dafb;
+    transition: background-color 0.3s, color 0.3s;
+}
+.light-mode {
+    background: #f5f5f5;
+    color: #282c34;
+}
+
+/* Clock Styling */
+.clock {
+    font-size: 5rem;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+.light-mode .clock {
+    background: rgba(255, 255, 255, 0.7);
+    color: #282c34;
+}
+
+/* Theme Toggle Wrapper */
+.theme-toggle-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Toggle Button */
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    width: 48px;
+    border-radius: 9999px;
+    background-color: #e5e5e5;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 0;
+}
+.theme-toggle.on {
+    background-color: #2563eb;
+}
+.theme-circle {
+    height: 18px;
+    width: 18px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 3px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.theme-toggle.on .theme-circle {
+    transform: translateX(24px);
+}
+
+/* Toggle Label */
+.toggle-label {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    transition: color 0.3s;
+}
+.light-mode .toggle-label {
+    color: #2563eb;
+}
